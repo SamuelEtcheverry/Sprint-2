@@ -97,3 +97,65 @@ function checkReveal() {
   document.querySelector('.slideshow-wrapper').addEventListener('mouseleave', function() {
     autoSlide = setInterval(function() { goToSlide(slideIndex + 1); }, 4000);
   });
+  var popup          = document.getElementById('popup');
+var image          = document.getElementById('cameraImage');
+var notification   = document.getElementById('notification');
+var resultPanel    = document.getElementById('resultPanel');
+var scanLine       = document.getElementById('scanLine');
+var captureBtn     = document.getElementById('captureBtn');
+var cancelBtn      = document.getElementById('cancelBtn');
+var confirmBtn     = document.getElementById('confirmBtn');
+var closeResultBtn = document.getElementById('closeResultBtn');
+var resetBtn       = document.getElementById('resetBtn');
+
+var currentStep = 1;
+
+function setHint(step) {
+  currentStep = step;
+  document.querySelectorAll('.hint').forEach(function(h) {
+    h.classList.toggle('active', parseInt(h.dataset.step) === step);
+  });
+}
+
+captureBtn.addEventListener('click', function() {
+  popup.classList.add('active');
+  setHint(2);
+});
+
+cancelBtn.addEventListener('click', function() {
+  popup.classList.remove('active');
+  setHint(1);
+});
+
+confirmBtn.addEventListener('click', function() {
+  popup.classList.remove('active');
+  setHint(3);
+
+  scanLine.classList.add('active');
+  setTimeout(function() { scanLine.classList.remove('active'); }, 1600);
+
+  image.classList.add('enhanced');
+
+  notification.classList.add('show');
+  setTimeout(function() { notification.classList.remove('show'); }, 2400);
+
+  setTimeout(function() {
+    resultPanel.classList.add('active');
+    setHint(4);
+  }, 1000);
+});
+
+closeResultBtn.addEventListener('click', function() {
+  resultPanel.classList.remove('active');
+  image.classList.remove('enhanced');
+  setHint(1);
+});
+
+resetBtn.addEventListener('click', function() {
+  resultPanel.classList.remove('active');
+  image.classList.remove('enhanced');
+  popup.classList.remove('active');
+  notification.classList.remove('show');
+  scanLine.classList.remove('active');
+  setHint(1);
+});
