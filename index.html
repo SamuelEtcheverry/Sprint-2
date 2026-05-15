@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Prime Lens</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="src/css/style.css">
-      </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Lens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
 <body>
 
     <button class="theme-toggle" id="themeToggle">
         <span class="toggle-icon">🌙</span>
         <span>Tema</span>
-      </button>
+    </button>
 
     <div class="login-screen" id="loginScreen">
-      <div class="login-bg-glow"></div>
-      <div class="login-bg-grid"></div>
-      <div class="login-card">
-        <div class="login-logo">
-          <span class="logo-bracket">[</span>PL<span class="logo-bracket">]</span>
+        <div class="login-bg-glow"></div>
+        <div class="login-bg-grid"></div>
+        <div class="login-card">
+            <div class="login-logo">
+                <span class="logo-bracket">[</span>PL<span class="logo-bracket">]</span>
+            </div>
+            <h1>Prime Lens</h1>
+            <p>Acesse o Modo Improve Scanner</p>
+            <form id="loginForm" novalidate>
+                <div class="field-group">
+                    <input type="email" id="email" placeholder=" " autocomplete="email">
+                    <label for="email">E-mail</label>
+                    <span class="field-error" id="emailError"></span>
+                </div>
+                <div class="field-group">
+                    <input type="password" id="password" placeholder=" " autocomplete="current-password">
+                    <label for="password">Senha</label>
+                    <span class="field-error" id="passwordError"></span>
+                </div>
+                <button type="submit" class="login-btn">
+                    <span class="btn-text">Entrar</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </form>
         </div>
-        <h1>Prime Lens</h1>
-        <p>Acesse o Modo Improve Scanner</p>
-        <form id="loginForm" novalidate>
-          <div class="field-group">
-            <input type="email" id="email" placeholder=" " autocomplete="email">
-            <label for="email">E-mail</label>
-            <span class="field-error" id="emailError"></span>
-          </div>
-          <div class="field-group">
-            <input type="password" id="password" placeholder=" " autocomplete="current-password">
-            <label for="password">Senha</label>
-            <span class="field-error" id="passwordError"></span>
-          </div>
-          <button type="submit" class="login-btn">
-            <span class="btn-text">Entrar</span>
-            <span class="btn-arrow">→</span>
-          </button>
-        </form>
-      </div>
     </div>
-  
+
     <div class="site-container" id="appScreen" style="display:none;">
         <section class="hero-section reveal-section">
             <div class="hero-noise"></div>
@@ -51,139 +55,175 @@
             <div class="hero-glow-2"></div>
             <div class="hero-tag">v1.0 · IA para Desenvolvedores</div>
             <h1 class="hero-title">
-              Prime<br>
-              <span class="accent">Lens</span>
+                Prime<br>
+                <span class="accent">Lens</span>
             </h1>
             <p class="hero-sub">
-              Inteligência artificial aplicada à produtividade de estudantes,
-              desenvolvedores e profissionais da tecnologia.
+                Inteligência artificial aplicada à produtividade de estudantes,
+                desenvolvedores e profissionais da tecnologia.
             </p>
             <p class="hero-desc">
-              Transforme a câmera do seu smartphone em uma ferramenta inteligente
-              capaz de detectar códigos, melhorar legibilidade e identificar
-              conteúdos técnicos em tempo real.
+                Transforme a câmera do seu smartphone em uma ferramenta inteligente
+                capaz de detectar códigos, melhorar legibilidade e identificar
+                conteúdos técnicos em tempo real.
             </p>
             <a href="#prototype" class="scroll-cta">
-              Ver protótipo
-              <span class="cta-arrow">↓</span>
+                Ver protótipo
+                <span class="cta-arrow">↓</span>
             </a>
         </section>
         <section class="about-section reveal-section">
             <h2>Sobre o Projeto</h2>
             <div class="about-cards">
-              <div class="about-card">
-                <div class="card-icon">📷</div>
-                <h3>O Problema</h3>
-                <p>Muitos estudantes enfrentam dificuldades ao fotografar códigos, quadros e anotações técnicas.</p>
-              </div>
-              <div class="about-card">
-                <div class="card-icon">⚡</div>
-                <h3>Os Obstáculos</h3>
-                <p>Reflexo, baixa iluminação, desfoque e nitidez reduzida dificultam o aprendizado e a produtividade.</p>
-              </div>
-              <div class="about-card">
-                <div class="card-icon">🧠</div>
-                <h3>A Solução</h3>
-                <p>IA integrada à câmera que analisa a cena e transforma imagens em conteúdo digital via OCR inteligente.</p>
-              </div>
+                <div class="about-card">
+                    <div class="card-icon">📷</div>
+                    <h3>O Problema</h3>
+                    <p>Muitos estudantes enfrentam dificuldades ao fotografar códigos, quadros e anotações técnicas.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Os Obstáculos</h3>
+                    <p>Reflexo, baixa iluminação, desfoque e nitidez reduzida dificultam o aprendizado e a
+                        produtividade.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>A Solução</h3>
+                    <p>IA integrada à câmera que analisa a cena e transforma imagens em conteúdo digital via OCR
+                        inteligente.</p>
+                </div>
             </div>
         </section>
         <section class="slideshow-section reveal-section" id="slideshow">
             <h2>Galeria de Capturas</h2>
             <p class="slideshow-subtitle">Exemplos reais de otimização pelo Prime Lens</p>
             <div class="slideshow-wrapper">
-              <div class="slideshow-track" id="slideshowTrack">
-                <div class="slide active">
-                  <div class="slide-img-wrap"><div class="slide-placeholder">🐍</div></div>
-                  <div class="slide-info">
-                    <span class="slide-lang">Python</span>
-                    <p>Código Python detectado e extraído com 97% de precisão</p>
-                  </div>
+                <div class="slideshow-track" id="slideshowTrack">
+                    <div class="slide active">
+                        <div class="slide-img-wrap">
+                            <div class="slide-placeholder">🐍</div>
+                        </div>
+                        <div class="slide-info">
+                            <span class="slide-lang">Python</span>
+                            <p>Código Python detectado e extraído com 97% de precisão</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-img-wrap">
+                            <div class="slide-placeholder">☕</div>
+                        </div>
+                        <div class="slide-info">
+                            <span class="slide-lang">Java</span>
+                            <p>Classe Java identificada mesmo com reflexo no quadro</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-img-wrap">
+                            <div class="slide-placeholder">🌐</div>
+                        </div>
+                        <div class="slide-info">
+                            <span class="slide-lang">HTML/CSS</span>
+                            <p>Markup e estilos capturados de monitor em ambiente com baixa luz</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-img-wrap">
+                            <div class="slide-placeholder">⚡</div>
+                        </div>
+                        <div class="slide-info">
+                            <span class="slide-lang">JavaScript</span>
+                            <p>Funções JavaScript extraídas de anotações escritas à mão</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="slide">
-                  <div class="slide-img-wrap"><div class="slide-placeholder">☕</div></div>
-                  <div class="slide-info">
-                    <span class="slide-lang">Java</span>
-                    <p>Classe Java identificada mesmo com reflexo no quadro</p>
-                  </div>
-                </div>
-                <div class="slide">
-                  <div class="slide-img-wrap"><div class="slide-placeholder">🌐</div></div>
-                  <div class="slide-info">
-                    <span class="slide-lang">HTML/CSS</span>
-                    <p>Markup e estilos capturados de monitor em ambiente com baixa luz</p>
-                  </div>
-                </div>
-                <div class="slide">
-                  <div class="slide-img-wrap"><div class="slide-placeholder">⚡</div></div>
-                  <div class="slide-info">
-                    <span class="slide-lang">JavaScript</span>
-                    <p>Funções JavaScript extraídas de anotações escritas à mão</p>
-                  </div>
-                </div>
-              </div>
-              <button class="slide-btn prev" id="slidePrev" aria-label="Anterior">‹</button>
-              <button class="slide-btn next" id="slideNext" aria-label="Próximo">›</button>
-              <div class="slide-dots" id="slideDots"></div>
+                <button class="slide-btn prev" id="slidePrev" aria-label="Anterior">‹</button>
+                <button class="slide-btn next" id="slideNext" aria-label="Próximo">›</button>
+                <div class="slide-dots" id="slideDots"></div>
             </div>
-          </section>
-          <section class="prototype-section reveal-section" id="prototype">
+        </section>
+        <section class="prototype-section reveal-section" id="prototype">
             <h2>Protótipo Interativo</h2>
             <div class="prototype-layout">
-              <div class="prototype-hints">
-                <div class="hint active" data-step="1"><span class="hint-num">01</span><span>Toque no botão de captura</span></div>
-                <div class="hint" data-step="2"><span class="hint-num">02</span><span>A IA detecta problemas na imagem</span></div>
-                <div class="hint" data-step="3"><span class="hint-num">03</span><span>Aplique a otimização automática</span></div>
-                <div class="hint" data-step="4"><span class="hint-num">04</span><span>Código extraído e pronto para copiar</span></div>
-              </div>
-              <div class="phone">
-                <img src="src/assets/python-code.png" class="camera-preview" id="cameraImage" alt="Camera preview">
-                <div class="overlay"></div>
-                <div class="top-bar">
-                  <div class="icon">⚡</div>
-                  <div class="icon">✕</div>
+                <div class="prototype-hints">
+                    <div class="hint active" data-step="1"><span class="hint-num">01</span><span>Toque no botão de
+                            captura</span></div>
+                    <div class="hint" data-step="2"><span class="hint-num">02</span><span>A IA detecta problemas na
+                            imagem</span></div>
+                    <div class="hint" data-step="3"><span class="hint-num">03</span><span>Aplique a otimização
+                            automática</span></div>
+                    <div class="hint" data-step="4"><span class="hint-num">04</span><span>Código extraído e pronto para
+                            copiar</span></div>
                 </div>
-                <div class="scanner-badge" id="scannerBadge">
-                  <span class="badge-dot"></span>
-                  Dev Scanner ativo · Python detectado
+                <div class="phone">
+                    <img src="src/assets/python-code.png" class="camera-preview" id="cameraImage" alt="Camera preview">
+                    <div class="overlay"></div>
+                    <div class="top-bar">
+                        <div class="icon">⚡</div>
+                        <div class="icon">✕</div>
+                    </div>
+                    <div class="scanner-badge" id="scannerBadge">
+                        <span class="badge-dot"></span>
+                        Dev Scanner ativo · Python detectado
+                    </div>
+                    <div class="scan-line" id="scanLine"></div>
+                    <div class="focus-box"></div>
+                    <div class="notification" id="notification">Modo inteligente ativado ✓</div>
+                    <div class="ai-popup" id="popup">
+                        <div class="ai-title"><span class="ai-icon">◈</span>Prime Lens AI</div>
+                        <div class="ai-text">Detectei reflexo e baixa nitidez no código. Deseja aplicar otimização
+                            automática?</div>
+                        <div class="ai-confidence">
+                            <span>Confiança da IA</span>
+                            <div class="confidence-bar">
+                                <div class="confidence-fill"></div>
+                            </div>
+                            <span class="confidence-pct">94%</span>
+                        </div>
+                        <div class="buttons">
+                            <button class="cancel" id="cancelBtn">Agora não</button>
+                            <button class="confirm" id="confirmBtn">Aplicar</button>
+                        </div>
+                    </div>
+                    <div class="bottom-bar">
+                        <div class="small-btn">📷</div>
+                        <div class="capture-btn" id="captureBtn"></div>
+                        <div class="small-btn" id="resetBtn">🔄</div>
+                    </div>
+                    <div class="result-panel" id="resultPanel">
+                        <div class="result-header">
+                            <h2>Código extraído</h2>
+                            <span class="result-lang">Python</span>
+                        </div>
+                        <div class="code-box" id="codeContent">def scanner():
+                            print('Prime Lens OCR ativo')
+                            return True</div>
+                        <button class="copy-btn" id="copyBtn"><span>Copiar código</span><span
+                                class="copy-icon">⎘</span></button>
+                        <button class="close-result" id="closeResultBtn">Tirar outra foto</button>
+                    </div>
                 </div>
-                <div class="scan-line" id="scanLine"></div>
-                <div class="focus-box"></div>
-                <div class="notification" id="notification">Modo inteligente ativado ✓</div>
-                <div class="ai-popup" id="popup">
-                  <div class="ai-title"><span class="ai-icon">◈</span>Prime Lens AI</div>
-                  <div class="ai-text">Detectei reflexo e baixa nitidez no código. Deseja aplicar otimização automática?</div>
-                  <div class="ai-confidence">
-                    <span>Confiança da IA</span>
-                    <div class="confidence-bar"><div class="confidence-fill"></div></div>
-                    <span class="confidence-pct">94%</span>
-                  </div>
-                  <div class="buttons">
-                    <button class="cancel" id="cancelBtn">Agora não</button>
-                    <button class="confirm" id="confirmBtn">Aplicar</button>
-                  </div>
-                </div>
-                <div class="bottom-bar">
-                  <div class="small-btn">📷</div>
-                  <div class="capture-btn" id="captureBtn"></div>
-                  <div class="small-btn" id="resetBtn">🔄</div>
-                </div>
-                <div class="result-panel" id="resultPanel">
-                  <div class="result-header">
-                    <h2>Código extraído</h2>
-                    <span class="result-lang">Python</span>
-                  </div>
-                  <div class="code-box" id="codeContent">def scanner():
-          print('Prime Lens OCR ativo')
-          return True</div>
-                  <button class="copy-btn" id="copyBtn"><span>Copiar código</span><span class="copy-icon">⎘</span></button>
-                  <button class="close-result" id="closeResultBtn">Tirar outra foto</button>
-                </div>
-              </div>
             </div>
-          </section>
+        </section>
+        <section class="future-section reveal-section">
+            <h2>Visão de Futuro</h2>
+            <div class="future-grid">
+                <div class="future-item"><span class="future-icon">🎥</span>
+                    <p>Análise de vídeos em tempo real</p>
+                </div>
+                <div class="future-item"><span class="future-icon">🐛</span>
+                    <p>Reconhecimento automático de bugs no código</p>
+                </div>
+                <div class="future-item"><span class="future-icon">💡</span>
+                    <p>Sugestões inteligentes de refatoração</p>
+                </div>
+                <div class="future-item"><span class="future-icon">🌐</span>
+                    <p>Suporte a múltiplas linguagens de programação</p>
+                </div>
+            </div>
+        </section>
     </div>
-  
+
     <script src="src/js/script.js"></script>
-  </body>
+</body>
+
 </html>
