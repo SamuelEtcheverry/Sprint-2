@@ -1203,3 +1203,13 @@ body.light-mode .field-group input {
     line-height: 1.6;
     color: var(--text-secondary);
 }
+
+@media (max-width: 700px) {
+    .prototype-hints  { display: none; }
+    .future-grid      { grid-template-columns: 1fr; }
+    .hero-title       { font-size: 60px; }
+    .slide            { flex-direction: column; }
+    .slide-img-wrap   { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); }
+    .slide-btn.prev   { left: -16px; }
+    .slide-btn.next   { right: -16px; }
+  }
