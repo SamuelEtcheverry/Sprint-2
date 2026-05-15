@@ -62,12 +62,7 @@ loginForm.addEventListener('submit', function(event) {
     btnText.textContent = original;
   }, 800);
 });
-function checkReveal() {
-    var elements = document.querySelectorAll('.reveal-section');
-    elements.forEach(function(el) {
-      el.classList.add('visible');
-    });
-  }
+
   var slides     = document.querySelectorAll('.slide');
   var dotsWrap   = document.getElementById('slideDots');
   var slideIndex = 0;
@@ -177,3 +172,14 @@ themeToggle.addEventListener('click', function() {
   var isLight = document.body.classList.toggle('light-mode');
   document.querySelector('.toggle-icon').textContent = isLight ? '☀️' : '🌙';
 });
+function checkReveal() {
+    document.querySelectorAll('.reveal-section').forEach(function(section) {
+      var rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.88) {
+        section.classList.add('visible');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', checkReveal);
+  document.addEventListener('DOMContentLoaded', checkReveal);
