@@ -50,8 +50,14 @@ loginForm.addEventListener('submit', function(event) {
   btnText.textContent = 'Entrando...';
 
   setTimeout(function() {
+    var userName = prompt('Bem-vindo ao Prime Lens!\nComo podemos te chamar?') || 'Desenvolvedor';
+    alert('Olá, ' + userName + '! Acesso liberado ao Prime Lens. 🚀');
+
     loginScreen.style.display = 'none';
     appScreen.style.display   = 'block';
+
+    setTimeout(checkReveal, 50);
+
     btn.disabled        = false;
     btnText.textContent = original;
   }, 800);
