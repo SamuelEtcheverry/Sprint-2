@@ -171,3 +171,9 @@ copyBtn.addEventListener('click', function() {
     setTimeout(function() { label.textContent = original; }, 2000);
   });
 });
+var themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', function() {
+  var isLight = document.body.classList.toggle('light-mode');
+  document.querySelector('.toggle-icon').textContent = isLight ? '☀️' : '🌙';
+});

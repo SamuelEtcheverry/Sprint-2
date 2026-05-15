@@ -497,3 +497,30 @@
   
   .close-result { width: 100%; padding: 13px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: transparent; color: var(--text-secondary); font-family: var(--font-display); font-size: 14px; cursor: pointer; transition: background 0.2s, color 0.2s; }
   .close-result:hover { background: var(--bg-surface); color: var(--text-primary); }
+
+  body.light-mode {
+    --bg-base:       #f0f2f5;
+    --bg-card:       #ffffff;
+    --bg-surface:    #e8ecf0;
+    --bg-raise:      #d8dde5;
+    --text-primary:  #0d1117;
+    --text-secondary:#4a5568;
+    --text-muted:    #a0aab4;
+    --border:        rgba(0,0,0,0.08);
+  }
+  body.light-mode::before {
+    background:
+      radial-gradient(ellipse 60% 40% at 10% 0%,   rgba(180,210,255,0.5) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 35% at 90% 5%,   rgba(180,255,230,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 40% at 30% 100%, rgba(210,190,255,0.3) 0%, transparent 60%),
+      var(--bg-base);
+  }
+  body.light-mode::after { opacity: 0.015; }
+  body.light-mode .about-card, body.light-mode .future-item { background: #fff; border-color: rgba(0,0,0,0.08); }
+  body.light-mode .slide { background: #fff; border-color: rgba(0,0,0,0.08); }
+  body.light-mode .phone { border-color: #c8cdd6; box-shadow: 0 40px 100px rgba(0,0,0,0.2); }
+  body.light-mode .result-panel { background: #ffffff; border-color: rgba(0,0,0,0.08); }
+  body.light-mode .code-box { background: #f0f2f5; border-color: rgba(0,0,0,0.08); }
+  body.light-mode .ai-popup { background: rgba(255,255,255,0.95); border-color: rgba(0,0,0,0.1); }
+  body.light-mode .login-card { background: #fff; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+  body.light-mode .field-group input { background: #f0f2f5; color: #111; border-color: rgba(0,0,0,0.1); }
