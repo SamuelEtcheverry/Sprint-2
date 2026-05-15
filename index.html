@@ -127,6 +127,61 @@
               <div class="slide-dots" id="slideDots"></div>
             </div>
           </section>
+          <section class="prototype-section reveal-section" id="prototype">
+            <h2>Protótipo Interativo</h2>
+            <div class="prototype-layout">
+              <div class="prototype-hints">
+                <div class="hint active" data-step="1"><span class="hint-num">01</span><span>Toque no botão de captura</span></div>
+                <div class="hint" data-step="2"><span class="hint-num">02</span><span>A IA detecta problemas na imagem</span></div>
+                <div class="hint" data-step="3"><span class="hint-num">03</span><span>Aplique a otimização automática</span></div>
+                <div class="hint" data-step="4"><span class="hint-num">04</span><span>Código extraído e pronto para copiar</span></div>
+              </div>
+              <div class="phone">
+                <img src="src/assets/python-code.png" class="camera-preview" id="cameraImage" alt="Camera preview">
+                <div class="overlay"></div>
+                <div class="top-bar">
+                  <div class="icon">⚡</div>
+                  <div class="icon">✕</div>
+                </div>
+                <div class="scanner-badge" id="scannerBadge">
+                  <span class="badge-dot"></span>
+                  Dev Scanner ativo · Python detectado
+                </div>
+                <div class="scan-line" id="scanLine"></div>
+                <div class="focus-box"></div>
+                <div class="notification" id="notification">Modo inteligente ativado ✓</div>
+                <div class="ai-popup" id="popup">
+                  <div class="ai-title"><span class="ai-icon">◈</span>Prime Lens AI</div>
+                  <div class="ai-text">Detectei reflexo e baixa nitidez no código. Deseja aplicar otimização automática?</div>
+                  <div class="ai-confidence">
+                    <span>Confiança da IA</span>
+                    <div class="confidence-bar"><div class="confidence-fill"></div></div>
+                    <span class="confidence-pct">94%</span>
+                  </div>
+                  <div class="buttons">
+                    <button class="cancel" id="cancelBtn">Agora não</button>
+                    <button class="confirm" id="confirmBtn">Aplicar</button>
+                  </div>
+                </div>
+                <div class="bottom-bar">
+                  <div class="small-btn">📷</div>
+                  <div class="capture-btn" id="captureBtn"></div>
+                  <div class="small-btn" id="resetBtn">🔄</div>
+                </div>
+                <div class="result-panel" id="resultPanel">
+                  <div class="result-header">
+                    <h2>Código extraído</h2>
+                    <span class="result-lang">Python</span>
+                  </div>
+                  <div class="code-box" id="codeContent">def scanner():
+          print('Prime Lens OCR ativo')
+          return True</div>
+                  <button class="copy-btn" id="copyBtn"><span>Copiar código</span><span class="copy-icon">⎘</span></button>
+                  <button class="close-result" id="closeResultBtn">Tirar outra foto</button>
+                </div>
+              </div>
+            </div>
+          </section>
     </div>
   
     <script src="src/js/script.js"></script>
