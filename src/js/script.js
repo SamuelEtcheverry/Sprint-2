@@ -159,3 +159,15 @@ resetBtn.addEventListener('click', function() {
   scanLine.classList.remove('active');
   setHint(1);
 });
+var copyBtn = document.getElementById('copyBtn');
+
+copyBtn.addEventListener('click', function() {
+  var text = document.getElementById('codeContent').innerText;
+
+  navigator.clipboard.writeText(text).then(function() {
+    var label    = copyBtn.querySelector('span:first-child');
+    var original = label.textContent;
+    label.textContent = 'Copiado! ✓';
+    setTimeout(function() { label.textContent = original; }, 2000);
+  });
+});
