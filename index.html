@@ -7,6 +7,37 @@
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-  <script src="src/js/script.js"></script>
-</body>
+
+    <div class="login-screen" id="loginScreen">
+      <div class="login-bg-glow"></div>
+      <div class="login-bg-grid"></div>
+      <div class="login-card">
+        <div class="login-logo">
+          <span class="logo-bracket">[</span>PL<span class="logo-bracket">]</span>
+        </div>
+        <h1>Prime Lens</h1>
+        <p>Acesse o Modo Improve Scanner</p>
+        <form id="loginForm" novalidate>
+          <div class="field-group">
+            <input type="email" id="email" placeholder=" " autocomplete="email">
+            <label for="email">E-mail</label>
+            <span class="field-error" id="emailError"></span>
+          </div>
+          <div class="field-group">
+            <input type="password" id="password" placeholder=" " autocomplete="current-password">
+            <label for="password">Senha</label>
+            <span class="field-error" id="passwordError"></span>
+          </div>
+          <button type="submit" class="login-btn">
+            <span class="btn-text">Entrar</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="site-container" id="appScreen" style="display:none;"></div>
+  
+    <script src="src/js/script.js"></script>
+  </body>
 </html>
