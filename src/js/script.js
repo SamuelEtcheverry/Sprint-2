@@ -62,3 +62,9 @@ loginForm.addEventListener('submit', function(event) {
     btnText.textContent = original;
   }, 800);
 });
+function checkReveal() {
+    var elements = document.querySelectorAll('.reveal-section');
+    elements.forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
